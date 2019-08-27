@@ -23,8 +23,8 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
 
     func configureUI(record: Bool) {
-            recordButton.isEnabled = record
-            stopRecordingButton.isEnabled = !record
+        recordButton.isEnabled = record
+        stopRecordingButton.isEnabled = !record
         recordingLabel.text = record ? "Tap to Record" : "Recording in Progress"
     }
     
@@ -48,7 +48,7 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
     }
     
     @IBAction func stopRecording(_ sender: Any) {
-        configureUI(record:true)
+        configureUI(record: true)
         
         audioRecorder.stop()
         let audioSession = AVAudioSession.sharedInstance()
@@ -60,7 +60,11 @@ class RecordSoundsViewController: UIViewController, AVAudioRecorderDelegate {
         if flag {
             performSegue(withIdentifier: "stopRecording", sender: audioRecorder.url)
         } else {
-            //recording failure
+            let alert = UIAlertController(title: "Recording Failure", message: "Message failed to record.", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: NSLocalizedString("OK", comment: "Default action"), style: .default, handler: { _ in
+                NSLog("The \"OK\" alert occured.")
+            }))
+            self.present(alert, animated: true, completion: nil)
         }
         
     }

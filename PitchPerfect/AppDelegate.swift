@@ -2,7 +2,7 @@
 //  AppDelegate.swift
 //  PitchPerfect
 //
-//  Created by Dustin Mahone on 8/19/19.
+//  Created by Dustin on 8/19/19.
 //  Copyright © 2019 Dustin. All rights reserved.
 //
 

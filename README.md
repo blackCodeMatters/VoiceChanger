@@ -10,7 +10,7 @@
 
 ## Images
 
-![RecordSoundsVC_](/Users/dustinm/Documents/experiments/PitchPerfect/RecordSoundsVC_.png)
+![RecordSoundsVC_](RecordSoundsVC_.png)
 
-![PlaySoundsVC_](/Users/dustinm/Documents/experiments/PitchPerfect/PlaySoundsVC_.png)
+![PlaySoundsVC_](PlaySoundsVC_.png)
 
